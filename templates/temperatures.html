@@ -1,0 +1,174 @@
+{% extends "template.html" %}
+
+
+
+</head>
+
+{% block body %}
+<div class="container ">
+
+  <div class="container-sm py-5" id="widget0">
+    <div class="container" id="widget_background">
+      <div class="container-sm" id="widget1-top">
+        <div class="row justify-content-center">
+          <div class="row justify-content-center">
+            <div class="col" id="borderedtop">
+              <h1> {{ city_corrected | capitalize }} </h1>
+            </div>
+            <div class="col" style="padding-right: 0px;">
+              <div class="searcher">
+                <form action="/temperatures" method="post">
+                  <input autocomplete="off" autofocus name="search" placeholder="Search City" type="text">
+                  <input type="submit" value="Search">
+                </form>
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+
+        <div class="row py-4" id="hourlytemp">
+          <div class="col">
+            <h2>Temperature</h2>
+          </div>
+          <div class="col">
+            <h2>{{ first_day[act_time]["temperature"] }} &#8451</h2>
+          </div>
+          <div class="col">
+            <h2> {{ first_day[act_time]["weather_decription"] | capitalize }}</h2>
+
+          </div>
+          <div class="col">
+            <img src={{ first_day[act_time]["weather-icon2"] }} />
+          </div>
+        </div>
+        <div class="row py-2" id="hourlytemp">
+          <div class="col" id="current_time0">
+            <h2>User Time </h2>
+          </div>
+          <div class="col time" id="current_time">
+            <h2>{{ cur_time }}</h2>
+          </div>
+
+          <div class="row my-3">
+            <div class="col">
+              <h2>Humidity </h2>
+            </div>
+            <div class="col">
+              <h2>{{ first_day[act_time]["humidity"] }} %</h2>
+            </div>
+            <div class="col">
+              <h2>Wind Speed </h2>
+            </div>
+            <div class="col">
+              <h2>{{ first_day[act_time]["wind_speed"] }} m/s</h2>
+            </div>
+            <div class="col">
+              <h2>Feels Like </h2>
+            </div>
+            <div class="col">
+              <h2>{{ first_day[act_time]["feels_like"] }} &#8451</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <h2 id="bordered1">Hourly Temperature</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row py-2 today center_content" id="hourlytemp">
+            {% for k, v in first_day.items() %}
+            <div class="col details_align center_content">
+              <div>
+                <p> {{ v.weather_decription }}</p>
+              </div>
+              <div>
+                <img src={{ first_day[k]["weather-icon2"] }} />
+              </div>
+              <div>
+                <p> {{k[10:-3]}}</p>
+              </div>
+              <div>
+                <p>{{ v.temperature }}&#8451 </p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="container my-5 mod-hover" id="widget1">
+      <div class="container-fluid" id="bordered">
+        <h2 id="bordered"> Average Daily Temperature Forecast </h2>
+      </div>
+      <div class="container-fluid my-1">
+        <div class="row my-3">
+          {% for k, v in avg_dict.items() %}
+          <div class="col center_content wid1">
+            <div class="row">
+              <h2>{{ k }}</h2>
+            </div>
+            <div class="row" id="smallerfont">
+              <p> {{ avg_dict[k]["date"][-10:] }}</p>
+            </div>
+
+
+            <div class="row" id="smallerfont">
+              <p> {{ avg_dict[k]["avg_temp"] }} &#8451</p>
+            </div>
+          </div>
+
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container my-5" id="widget1">
+      <div class="container-fluid" id="bordered">
+        <h2 id="bordered"> Wind Graph </h2>
+      </div>
+      <div class="row px-5 py-5">
+        <div class="col justify-content-center" id="chart2">
+        </div>
+      </div>
+    </div>
+    <div class="container" id="widget3">
+      <div class="container-fluid" id="bordered">
+        <h2 id="bordered"> Temperature / Precipitation Graphs </h2>
+      </div>
+      <div class="row px-5 py-5">
+        <div class="col justify-content-center" id="chart1">
+        </div>
+      </div>
+
+    </div>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script type="text/javascript">
+      var graphs1 = {{ graphs12 | safe }};
+      Plotly.plot("chart1", graphs1, {});
+      var graph3 = {{ graph3 | safe }};
+      Plotly.plot("chart2", graph3, {});
+    </script>
+    <script src="../static/js/ajax.js"></script>
+    <script>
+      function background_img(widg_img_name) {
+
+        document.getElementById("widget_background").style.backgroundImage = widg_img_name;
+      }
+      background_img({{ widg_img_name | safe}});
+    </script>
+  </div>
+
+</div>
+{% endblock body %}
+
+</html>

@@ -1,0 +1,20 @@
+{% extends "template.html" %}
+
+{% block body %}
+<div class="container justify-content-center my-5" id="notfound">
+
+    <div class="card text-center" id="widget1">
+        <div class="card-header" id="borderedtop">
+            Weather AVG
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">An Error Has Occured</h5>
+            <img src="../static/nothing.jpg" />
+            <br>
+            <a href="{{ url_for('index') }}" class="btn btn-primary">Back</a>
+
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

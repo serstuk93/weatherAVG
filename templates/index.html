@@ -1,0 +1,177 @@
+{% extends "template.html" %}
+
+{% block body %}
+<div class="container ">
+
+
+
+    <div class="container-sm my-5" id="widget0">
+        <div class="container" id="widget_background">
+            <div class="container-sm" id="widget1-top">
+                <div class="row justify-content-center">
+                    <div class="row justify-content-center">
+                        <div class="col" id="borderedtop">
+                            <h1> Weather AVG </h1>
+                        </div>
+                        <div class="col" style="padding-right: 0px;">
+                            <div class="searcher">
+                                <form action="/temperatures" method="post">
+                                    <input autocomplete="off" autofocus name="search" placeholder="Search City"
+                                        type="text">
+                                    <input type="submit" value="Search">
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                    <div class="container" id="expanding">
+                        <p>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+                                aria-expanded="false" aria-controls="multiCollapseExample1">About website</a>
+             
+                        </p>
+                        <div class="row">
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                    <div class="card card-body" id="widget1" style="padding-left:5px">
+                                        <h4>Website creates graphs and average data from 3 sources: Openweather, Open Meteo, Meteomatics.
+                                        </h4>
+                                        <h4>Project was created for CS50x by Radoslav Šersťuk.
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+        <!--          <div class="row py-2" id="hourlytemp">
+                <div class="col">
+                        <h2>Temperature</h2>
+                    </div>
+                    <div class="col">
+                        <h2></h2>
+                    </div>
+                    <div class="col">
+                        <h2> </h2>
+
+                    </div>
+                    <div class="col">
+                       
+                    </div>
+                </div>
+                <div class="row py-2" id="hourlytemp">
+                    <div class="col" id="current_time0">
+                        <h2>Current time </h2>
+                    </div>
+                    <div class="col time" id="current_time">
+                        <h2></h2>
+                    </div>
+
+                    <div class="row my-3">
+                        <div class="col">
+                            <h2>Humidity </h2>
+                        </div>
+                        <div class="col">
+                            <h2></h2>
+                        </div>
+                        <div class="col">
+                            <h2>Wind Speed </h2>
+                        </div>
+                        <div class="col">
+                            <h2></h2>
+                        </div>
+                        <div class="col">
+                            <h2>Feels Like </h2>
+                        </div>
+                        <div class="col">
+                            <h2></h2>
+                        </div>
+                    </div>
+                </div>
+
+              <div class="row">
+                    <div class="col">
+                        <h2 id="bordered1">Hourly Temperature</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row py-2 today center_content" id="hourlytemp">
+                       
+                        <div class="col details_align center_content">
+                            <div>
+                                <p> </p>
+                            </div>
+                            <div>
+                                
+                            </div>
+                            <div>
+                                <p></p>
+                            </div>
+                            <div>
+                                <p> </p>
+                            </div>
+                        </div>
+                      
+                    </div>
+                </div>
+
+            </div>
+        </div>
+     <div class="container my-5 mod-hover" id="widget1">
+            <div class="container-fluid" id="bordered">
+                <h2 id="bordered"> Average Daily Temperature Forecast </h2>
+            </div>
+            <div class="container-fluid my-1">
+                <div class="row my-3">
+                  
+                    <div class="col center_content wid1">
+                        <div class="row">
+                            <h2></h2>
+                        </div>
+                        <div class="row" id="smallerfont">
+                            <p> </p>
+                        </div>
+
+
+                        <div class="row" id="smallerfont">
+                            <p> </p>
+                        </div>
+                    </div>
+
+                   
+
+                </div>
+            </div>
+        </div>
+
+
+      <div class="container my-5" id="widget1">
+            <div class="container-fluid" id="bordered">
+                <h2 id="bordered"> Wind Graph </h2>
+            </div>
+            <div class="row px-5 py-5">
+                <div class="col justify-content-center" id="chart2">
+                </div>
+            </div>
+        </div>
+       <div class="container" id="widget3">
+            <div class="container-fluid" id="bordered">
+                <h2 id="bordered"> Temperature / Precipitation Graphs </h2>
+            </div>
+            <div class="row px-5 py-5">
+                <div class="col justify-content-center" id="chart1">
+                </div>
+            </div>
+
+        </div> -->
+
+    </div>
+</div>
+</div>
+{% endblock %}
