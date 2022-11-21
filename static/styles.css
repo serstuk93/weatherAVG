@@ -25,7 +25,7 @@
 #widget1:hover {
     background-color: #0093E9;
     background: linear-gradient(160deg, rgba(97, 140, 165, 0.5) 0%, rgba(123, 172, 166, 0.5) 100%);
-    box-shadow: 10px 10px 5px lightblue;
+    box-shadow: 5px 5px 5px lightblue;
     transform: rotateY(1deg);
 
 }
@@ -45,14 +45,15 @@
 .wid:hover {
     background-color: #0093E9;
     background-image: linear-gradient(160deg, rgba(0, 147, 233, 0.5) 0%, rgba(41, 189, 172, 0.5) 100%);
-    box-shadow: 10px 10px 5px lightblue;
+    box-shadow: 5px 5px 5px lightblue;
     transform: rotateY(1deg);
 
 }
 .wid1:hover {
-    box-shadow: 10px 10px 5px lightblue;
+    box-shadow: 5px 5px 5px lightblue;
     cursor: pointer;
 }
+/*
 .wid2:hover {
     box-shadow: 7px 10px 5px lightblue;
 }
@@ -69,8 +70,9 @@
     box-shadow: -7px 10px 5px lightblue;
 }
 .wid7:hover {
-    box-shadow: -10px 10px 5px lightblue;
+    box-shadow: -10px 10px 5px rgb(255, 0, 0);
 }
+*/
 body{
     background-color: #8EC5FC;
     background-image: url("nicholas-fuentes-rM4KCp5eXdU-unsplash.jpg");
@@ -97,10 +99,9 @@ body{
 #widget3:hover {
     background-color: #0093E9;
     background: linear-gradient(180deg, rgba(110, 175, 212, 0.5) 0%, rgba(128, 208, 199, 0.6) 70%, rgba(128, 208, 199, 0) 90%);
-    
-    transform: rotateY(10deg);
+   /* transform: rotateY(5deg); */
 
-}
+}   
 
 input[type=text] {
     
@@ -156,6 +157,8 @@ input[type=submit]:hover {
 .center_content {
     text-align: center !important;
     align-items: center;
+    border-radius: 30px;
+    min-height: 90px;
 }
 
 .details_align{
@@ -240,7 +243,7 @@ input[type=submit]:hover {
 #widget_background:hover {
     background-color: #0093E9;
     background: linear-gradient(160deg, rgba(97, 140, 165, 0.5) 0%, rgba(123, 172, 166, 0.5) 100%);
-    box-shadow: 10px 10px 5px lightblue;
+    box-shadow: 5px 5px 5px lightblue;
     transform: rotateY(1deg);
 
 }
@@ -261,7 +264,7 @@ input[type=submit]:hover {
 #widget1-top:hover {
     background-color: #0093E9;
     background: linear-gradient(160deg, rgba(97, 140, 165, 0.5) 0%, rgba(123, 172, 166, 0.5) 100%);
-    box-shadow: 10px 10px 5px lightblue;
+    box-shadow: 5px 5px 5px lightblue;
     transform: rotateY(0deg) !important;
 
 }

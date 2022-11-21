@@ -130,6 +130,7 @@ def history_graphs(city, lang):
         first_day_dict.clear()
         open_meteo_avg.clear()
         return '404'
+    #openweather(searched_city , language)
     open_meteo()
     meteomatics()
     # return values for html

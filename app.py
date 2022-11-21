@@ -18,9 +18,7 @@ def temperature_show():
             return render_template("failure.html")
 
     city = request.form.get("search")
-    print(city)
     lang = "en"
-    print(lang)
 
     weather_res = weather.history_graphs(city, lang)
     if weather_res == '404':
@@ -46,7 +44,6 @@ def temperature_show():
     else: 
         widg_img_name = f"url('/static/weather_img/{widg_temp}.jpg')" 
     widg_img_name= ('"' + widg_img_name + '"')
-    print(widg_img_name)
 
     if request.method == "GET":
         return render_template("index.html")

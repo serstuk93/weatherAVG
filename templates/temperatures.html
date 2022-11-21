@@ -85,8 +85,8 @@
           <div class="row py-2 today center_content" id="hourlytemp">
             {% for k, v in first_day.items() %}
             <div class="col details_align center_content">
-              <div>
-                <p> {{ v.weather_decription }}</p>
+              <div style="min-height:90px" class="justify-content-center">
+                <p > {{ v.weather_decription }} </p>
               </div>
               <div>
                 <img src={{ first_day[k]["weather-icon2"] }} />
